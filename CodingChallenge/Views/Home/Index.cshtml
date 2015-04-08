@@ -1,0 +1,62 @@
+﻿@model CodingChallenge.Models.CodingChallengeModel
+
+@{
+    ViewBag.Title = "Coding Challenge";
+}
+
+<style type="text/css">
+    .group:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    body {
+        margin:0;
+    }
+
+    .column {
+        float: left;
+    }
+
+    .box {
+        border-left: 1px solid rgba(255,255,255,0.5);
+    }
+
+</style>
+
+<div class="group">
+    @foreach (var c in Model.Columns)
+    {
+        <div class="column" style="width:@Model.ColumnWidth%;">
+            @HTML.Box(c.Boxes[0].HeightPercent, "#ff0303")
+            @HTML.Box(c.Boxes[1].HeightPercent, "#ffa500")
+            @HTML.Box(c.Boxes[2].HeightPercent, "#97fb97")
+            @HTML.Box(c.Boxes[3].HeightPercent, "#da70d6")
+            @HTML.Box(c.Boxes[4].HeightPercent, "#000080")
+            @HTML.Box(c.Boxes[5].HeightPercent, "#ffff00")
+            @HTML.Box(c.Boxes[6].HeightPercent, "#7e7e00")
+            @HTML.Box(c.Boxes[7].HeightPercent, "#008080")
+            @HTML.Box(c.Boxes[8].HeightPercent, "#ff6347")
+            @HTML.Box(c.Boxes[9].HeightPercent, "#8b4512")
+            @HTML.Box(c.Boxes[10].HeightPercent, "#faebd7")
+            @HTML.Box(c.Boxes[11].HeightPercent, "#eee8aa")
+        </div>
+    }
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+<script>
+    var setHeight = function ()
+    {
+        var windowHeight = $(window).innerHeight();
+        $('.column').height(windowHeight);
+    }
+
+    $(document).ready(function () {
+        setHeight();
+        $(window).resize(function () {
+            setHeight();
+        });
+    });
+</script>
