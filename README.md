@@ -3,12 +3,12 @@
 Your task is to develop a .NET 4 MVC website to visualize data from the provided .CSV file. 
 
 Here is a sample:
-ColumnIndex	ColumnOpacity	Box1	Box2	Box3	Box4	Box5	Box6	Box7	Box8	Box9	Box10	Box11	Box12
-1	0.977	0.002	0.003	0.133	0.186	0.197	0.075	0.057	0.008	0.037	0.043	0.145	0.115
-2	1	0	0	0.131	0.227	0.246	0.049	0.067	0	0	0.029	0.138	0.113
+
+![alt tag](https://dl.dropboxusercontent.com/u/1854875/images/HtmlCodingChallenge2015/sample-data.png)
 
 Here is a sample screenshot of what your visualization could look like:
 
+![alt tag](https://dl.dropboxusercontent.com/u/1854875/images/HtmlCodingChallenge2015/sample-output.png)
 
 Your goal is to create 115 equal-width columns based on the data.  Your whole visualization should fill 100% of browser Width and Height. 
 
